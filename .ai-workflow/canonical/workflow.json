@@ -4,9 +4,7 @@
     "source": "capability-profiles.json"
   },
   "instructions": {
-    "sources": [
-      "instructions/project.md"
-    ]
+    "sources": ["instructions/project.md"]
   },
   "native_overlays": {
     "claude": {
