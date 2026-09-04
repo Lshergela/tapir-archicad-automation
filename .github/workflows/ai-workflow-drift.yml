@@ -1,0 +1,38 @@
+name: AI workflow drift
+
+on:
+  pull_request:
+    paths:
+      - ".ai-workflow/canonical/**"
+      - ".agents/skills/**"
+      - ".codex/agents/**"
+      - ".claude/agents/**"
+      - ".claude/skills/**"
+      - "AGENTS.md"
+      - "CLAUDE.md"
+      - "scripts/check_ai_workflow_drift.py"
+      - ".github/workflows/ai-workflow-drift.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - ".ai-workflow/canonical/**"
+      - ".agents/skills/**"
+      - ".codex/agents/**"
+      - ".claude/agents/**"
+      - ".claude/skills/**"
+      - "AGENTS.md"
+      - "CLAUDE.md"
+      - "scripts/check_ai_workflow_drift.py"
+      - ".github/workflows/ai-workflow-drift.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Verify generated surfaces
+        run: python3 scripts/check_ai_workflow_drift.py

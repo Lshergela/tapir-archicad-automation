@@ -1,0 +1,25 @@
+{
+  "agents": [],
+  "capability_profiles": {
+    "source": "capability-profiles.json"
+  },
+  "instructions": {
+    "sources": ["instructions/project.md"]
+  },
+  "native_overlays": {
+    "claude": {
+      "source": "overlays/claude.json"
+    },
+    "codex": {
+      "source": "overlays/codex.json"
+    }
+  },
+  "provider_concerns": {
+    "source": "provider-concerns.json"
+  },
+  "runtime_policy": {
+    "source": "runtime-policy.json"
+  },
+  "schema_version": 3,
+  "skills": []
+}

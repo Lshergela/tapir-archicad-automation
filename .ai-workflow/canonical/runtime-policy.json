@@ -1,0 +1,16 @@
+{
+  "instruction_budgets": {
+    "global_bytes": 8192,
+    "global_plus_project_bytes": 24576,
+    "skill_description_bytes": 3072
+  },
+  "runtime": {
+    "default_model_tier": "frontier",
+    "default_reasoning_effort": "xhigh",
+    "forge_activation": "explicit-only",
+    "maximum_reasoning_policy": "explicit-or-benchmark",
+    "orchestration": "adaptive",
+    "skill_loading": "lazy"
+  },
+  "schema_version": 1
+}
