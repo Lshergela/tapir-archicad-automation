@@ -138,3 +138,10 @@ grasshopper-plugin/src/test.py
 .vscode
 .lck
 /.vs
+
+# ai-workflow local runtime state (canonical/ remains tracked)
+.ai-workflow/backups/
+.ai-workflow/staging/
+.ai-workflow/locks/
+.ai-workflow/codex-manifest.json
+.ai-workflow/claude-manifest.json
